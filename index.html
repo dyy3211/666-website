@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #c4f0c4 0%, #6b4f3f 100%);
+            background-size: 200% 200%;
+            animation: moveBg 10s ease infinite alternate;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #3b2f2f;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
+        @keyframes moveBg {
+            0% {background-position: 0% 0%;}
+            100% {background-position: 100% 100%;}
+        }
+
+        h1, h2, p {
+            margin: 10px;
+            text-align: center;
+            font-size: 1.5rem; /* Responsive text size */
+        }
+
+        /* Responsive images container */
+        .images {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+        }
+
+        .images img {
+            width: 100%;
+            max-width: 350px; /* Make images responsive */
+            border-radius: 20px;
+            margin: -30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            animation: bounce 3s ease-in-out infinite alternate, float 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {transform: translateY(0px);}
+            100% {transform: translateY(-30px);}
+        }
+
+        @keyframes float {
+            0% {transform: translateX(0);}
+            50% {transform: translateX(30px);}
+            100% {transform: translateX(-30px);}
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s ease;
+            font-size: 1rem; /* Responsive button text */
+        }
+
+        #yes {
+            background-color: #a52a2a;
+            color: white;
+        }
+
+        #no {
+            background-color: #808080;
+            color: white;
+        }
+
+        #no:hover {
+            transform: scale(1.1);
+        }
+
+        /* Adjust text and buttons for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            button {
+                width: 90%; /* Make buttons wider on small screens */
+            }
+
+            .images img {
+                max-width: 80%; /* Allow images to shrink */
+                margin: 0; /* Remove margin overlap */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SASLIKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK💌</h1>
+    <p>I have something important to ask you...</p>
+
+    <div class="images">
+        <img src="us.jpg" alt="First photo">
+        <img src="us2.jpg" alt="Second photo">
+    </div>
+
+    <h2>Will you be my Valentine?</h2>
+
+    <button id="yes">YES</button>
+    <button id="no">No</button>
+
+    <p id="response"></p>
+
+    <script>
+        const yes = document.getElementById("yes");
+        const no = document.getElementById("no");
+        const response = document.getElementById("response");
+
+        yes.onclick = function() {
+            response.innerHTML = "ABSOLUTELY WONDERFUL CHOICE, MESSAGE ME BACK SAYING 666 🎉";
+        };
+
+        no.onmouseover = function() {
+            no.style.position = "absolute";
+            no.style.left = Math.random() * (window.innerWidth - 120) + "px";
+            no.style.top = Math.random() * (window.innerHeight - 60) + "px";
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    background: pink;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+img {
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: red;
+    color: white;
+}
+
+#no {
+    background-color: gray;
+    color: white;
+}
